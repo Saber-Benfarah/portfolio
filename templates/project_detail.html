@@ -1,0 +1,11 @@
+{% extends "layout.html" %}
+
+{% block content %}
+    <h1>{{ project.title }}</h1>
+    <p>{{ project.description }}</p>
+    <div class="gallery">
+        {% for image in project.images %}
+            <img src="{{ url_for('static', filename='images/' + image) }}" alt="{{ project.title }}">
+        {% endfor %}
+    </div>
+{% endblock %}

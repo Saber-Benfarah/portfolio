@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <nav>
+        <a href="{{ url_for('main.home') }}">Home</a>
+        <a href="{{ url_for('main.service') }}">Services</a>
+        <a href="{{ url_for('main.project') }}">Projects</a>
+        <a href="{{ url_for('main.contact') }}">Contact</a>
+    </nav>
+
+    <div class="content">
+        {% block content %}{% endblock %}
+    </div>
+
+    <!-- Contact Info Always at the Bottom -->
+    <footer>
+        <div class="contact-info">
+            <h3>Contact Me</h3>
+            <p>📍 Elhamma, Gabes, Tunisia</p>
+            <p>✉️ <a href="mailto:saber.benfarah@ieee.org">saber.benfarah@ieee.org</a></p>
+            <p>📞 (+216) 55 780 381</p>
+            <p>🔗 <a href="https://github.com/SaberBenfarah" target="_blank">GitHub Profile</a></p>
+        </div>
+    </footer>
+</body>
+</html>

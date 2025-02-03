@@ -1,0 +1,50 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="services-container">
+    <h1>My Services</h1>
+    <p>I provide a variety of services, from software development to design work. Click on a service to order a custom project.</p>
+
+    <div class="services-list">
+        <a href="{{ url_for('main.order_service', service='python-development') }}" class="service-card">
+            <h2>🚀 Python Development</h2>
+            <p>Custom Python applications, automation scripts, and backend development using Flask and Django.</p>
+        </a>
+
+        <a href="{{ url_for('main.order_service', service='web-development') }}" class="service-card">
+            <h2>🌐 Web Development</h2>
+            <p>Build modern, responsive websites with Flask, ReactJS, and Bootstrap.</p>
+        </a>
+
+        <a href="{{ url_for('main.order_service', service='mobile-development') }}" class="service-card">
+            <h2>📱 Mobile App Development</h2>
+            <p>Android and cross-platform mobile app development using Kotlin and Flutter.</p>
+        </a>
+
+        <a href="{{ url_for('main.order_service', service='ar-vr') }}" class="service-card">
+            <h2>🎮 AR/VR Development</h2>
+            <p>Create immersive AR/VR experiences using Unity and C#.</p>
+        </a>
+
+        <a href="{{ url_for('main.order_service', service='ai-model') }}" class="service-card">
+            <h2>🤖 AI Model Training</h2>
+            <p>Fine-tuning AI models like GPT and T5 for machine learning and NLP solutions.</p>
+        </a>
+
+        <a href="{{ url_for('main.order_service', service='cv-creation') }}" class="service-card">
+            <h2>📄 CV Creation</h2>
+            <p>Get a professional and well-designed CV tailored to your field.</p>
+        </a>
+
+        <a href="{{ url_for('main.order_service', service='logo-design') }}" class="service-card">
+            <h2>🎨 Logo Design</h2>
+            <p>Custom logo designs that reflect your brand identity.</p>
+        </a>
+
+        <a href="{{ url_for('main.order_service', service='custom-project') }}" class="service-card">
+            <h2>📌 Custom Work</h2>
+            <p>Have a special project? Let’s discuss your unique requirements.</p>
+        </a>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="order-container">
+    <h1>Order a Service</h1>
+    <p>You are ordering: <strong>{{ service_name }}</strong></p>
+    <p>Describe your requirements, and I will get back to you.</p>
+
+    <form action="#" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="description" placeholder="Describe your project in detail" rows="5" required></textarea>
+        <button type="submit">Submit Order</button>
+    </form>
+</div>
+{% endblock %}

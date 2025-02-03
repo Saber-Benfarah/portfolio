@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="contact-container">
+    <h1>Get in Touch</h1>
+    <p>If you have any questions, project ideas, or collaboration requests, feel free to reach out to me!</p>
+
+    <div class="contact-details">
+        <div class="contact-item">
+            <h3>📍 Location</h3>
+            <p>Elhamma, Gabes, Tunisia</p>
+        </div>
+        <div class="contact-item">
+            <h3>📧 Email</h3>
+            <p><a href="mailto:saber.benfarah@ieee.org">saber.benfarah@ieee.org</a></p>
+        </div>
+        <div class="contact-item">
+            <h3>📞 Phone</h3>
+            <p>(+216) 55 780 381</p>
+        </div>
+    </div>
+
+    <h2>📨 Send Me a Message</h2>
+    <form action="#" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+        <button type="submit">Send Message</button>
+    </form>
+
+    <h2>🔗 Connect With Me</h2>
+    <div class="social-links">
+        <a href="https://github.com/SaberBenfarah" target="_blank">GitHub</a>
+    </div>
+</div>
+{% endblock %}
