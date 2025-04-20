@@ -1,11 +1,28 @@
 {% extends "layout.html" %}
 
 {% block content %}
+<div class="project-detail-container">
     <h1>{{ project.title }}</h1>
-    <p>{{ project.description }}</p>
-    <div class="gallery">
+    
+    <div class="project-images">
         {% for image in project.images %}
             <img src="{{ url_for('static', filename='images/' + image) }}" alt="{{ project.title }}">
         {% endfor %}
     </div>
+
+    <div class="project-info">
+        <h2>Project Overview</h2>
+        <p>{{ project.description }}</p>
+
+        <h2>Technologies Used</h2>
+        <p>{{ project.technologies }}</p>
+
+        <h2>Key Features</h2>
+        <ul>
+            {% for feature in project.features %}
+                <li>{{ feature }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>
 {% endblock %}
